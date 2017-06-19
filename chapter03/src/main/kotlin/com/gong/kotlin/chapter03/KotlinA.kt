@@ -10,6 +10,14 @@ class X
 
 class A (var c:String){
     var b = 0
+        get() {
+            println("getB")
+            return field
+        }
+        set(value) {
+            println("setB $value")
+            field = value
+        }
     lateinit var d:X
     val e:X by lazy {
         println("init X")
@@ -19,6 +27,7 @@ class A (var c:String){
 
 fun main(args: Array<String>) {
     val a = A("Hello")
+    a.b = 25;
     println(a.b)
     println(a.e)
 
