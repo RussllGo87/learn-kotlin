@@ -5,7 +5,8 @@ buildscript {
     ext.kotlin_version = '1.1.2'
 
     repositories {
-        mavenCentral()
+        // mavenCentral()
+	    jcenter()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -18,7 +19,8 @@ apply plugin: 'kotlin'
 sourceCompatibility = 1.8
 
 repositories {
-    mavenCentral()
+    // mavenCentral()
+    jcenter()
 }
 
 dependencies {
